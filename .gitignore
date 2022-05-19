@@ -1,5 +1,9 @@
 wedit
 
+# Build dependencies
+cvector/
+estring/
+
 # Prerequisites
 *.d
 
