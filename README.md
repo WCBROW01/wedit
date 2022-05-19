@@ -7,7 +7,7 @@ It is not in a usable state yet, and barely renders text.
 ## Build Instructions
 
 First, you must grab the build dependencies. You can run `make build-deps` to acquire these, or grab them manually.
-The build dependencies are currently [enchanced-cstrings](https://github.com/WCBROW01/enhanced-cstrings) and [cvector](https://github.com/WCBROW01/cvector), which are both my own projects.
+The build dependencies are currently [enhanced-cstrings](https://github.com/WCBROW01/enhanced-cstrings) and [cvector](https://github.com/WCBROW01/cvector), which are both my own projects.
 
 If you have problems building related to these, try reaquiring them. The `clean-deps` rule should remove them.
 
