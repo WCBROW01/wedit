@@ -77,14 +77,13 @@ Vec *load_file(const char *pathname) {
 void print_text(Vec *lines) {
 	String *lines_array = lines->data;
 	for (size_t i = 0; i < lines->size; ++i) {
-		printf("%s\n", String_to_cstr(lines_array[i]));
+		printf("%s\r\n", String_to_cstr(lines_array[i]));
 	}
 }
 
-void String_freeptr(String *str) {
-	String_free(*str);
+void String_freeptr(void *str) {
+	String_free(*(String *)str);
 }
-
 
 int main(int argc, char **argv) {
 	Vec *lines;
@@ -92,7 +91,6 @@ int main(int argc, char **argv) {
 	if (argc > 1) {
 		const char *pathname = argv[1];
 		lines = load_file(pathname);
-		printf("Cap: %zu, Size: %zu\n", lines->cap, lines->size);
 	} else {
 		lines = Vec(String);
 		String str = String("");
