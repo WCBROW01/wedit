@@ -76,7 +76,7 @@ Vec *load_file(const char *pathname) {
 
 void print_text(Vec *lines) {
 	String *lines_array = lines->data;
-	for (size_t i = 0; i < lines->size; ++i) {
+	for (size_t i = 0; i < lines->len; ++i) {
 		printf("%s\r\n", String_to_cstr(lines_array[i]));
 	}
 }
